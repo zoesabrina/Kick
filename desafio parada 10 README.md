@@ -1,5 +1,4 @@
-# Kick
-DesafioParada10
+# DesafioParada10
 
 Equipe 5: Juliana Orlandin, Maikel Jefferson, Maria Evely da Silva , Sabrina Zoe.
 
