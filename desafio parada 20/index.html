@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 20 - 21</title>
+    <!--Desenvolva um código para uma eleição, ele deve conter ao menos 4 opções de voto, além da opção nulo/branco. Ao votar deve ser possível votar novamente ou sair da votação, e ao final a quantidade de votos de cada candidato deve aparecer na tela. Coloque o código no github e envie o link. Dica: Utilize switch e while.-->
+</head>
+<body>
+    <script>
+        let votoNulo = 0;
+        let votoSabrina = 0;
+        let votoNatália = 0;
+        let votoKayky = 0;
+        let votoChris = 0;
+        
+        let voto = parseInt(prompt("Faça sua votação: 1 - Sabrina │ 2 - Natália │ 3 - Kayky │ 4 - Chris │ 5 - Nulo/Branco │ 0 - Sair"));
+
+        while(voto != 0){
+
+            switch(voto){
+                case 1:
+                    votoSabrina++;
+                    break;
+                case 2:
+                    votoNatália++;
+                    break;
+                case 3:
+                    votoKayky++;
+                    break;
+                case 4:
+                    votoChris++;
+                    break;
+                case 5:
+                    votoNulo++;
+                    break;
+                default:
+                    alert("Voto inválido");
+                    break;
+            }
+            voto = parseInt(prompt("Faça sua votação novamente: 1 - Sabrina │ 2 - Natália │ 3 - Kayky │ 4 - Chris │ 5 - Nulo/Branco │ 0 - Sair"));
+        }
+        alert(`O total da votação foi: \nSabrina = ${votoSabrina} \nNatália = ${votoNatália} \nKayky = ${votoKayky} \nChris = ${votoChris} \nNulo/Branco ${votoNulo}`);
+    </script>
+</body>
+</html>
