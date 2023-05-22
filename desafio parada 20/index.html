@@ -6,9 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>desafio 20 - 21</title>
     <!--Desenvolva um código para uma eleição, ele deve conter ao menos 4 opções de voto, além da opção nulo/branco. Ao votar deve ser possível votar novamente ou sair da votação, e ao final a quantidade de votos de cada candidato deve aparecer na tela. Coloque o código no github e envie o link. Dica: Utilize switch e while.-->
+
+    <style>
+        body{
+            background: white;
+        }
+
+        #resultado{
+            width: 40%;
+            height: 40%;
+            margin: 0 auto;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: #029115;
+            border: 1px solid rgb(99, 99, 99);
+        }        
+    </style>
 </head>
 <body>
+
+    <div id="resultado">
+        <h1 style="color: #ffffff;">Eleição 2023</h1>
+        <h2 id="votoSabrina" style="color: #ffffff;"></h2>
+        <h2 id="votoNatália" style="color: #ffffff;"></h2>
+        <h2 id="votoKayky" style="color: rgb(255, 255, 255);"></h2>
+        <h2 id="votoChris" style="color: #ffffff;"></h2>
+        <h2 id="votoNulo" style="color: #ffffff;"></h2>
+    </div>
+    
     <script>
+
         let votoNulo = 0;
         let votoSabrina = 0;
         let votoNatália = 0;
@@ -41,7 +69,11 @@
             }
             voto = parseInt(prompt("Faça sua votação novamente: 1 - Sabrina │ 2 - Natália │ 3 - Kayky │ 4 - Chris │ 5 - Nulo/Branco │ 0 - Sair"));
         }
-        alert(`O total da votação foi: \nSabrina = ${votoSabrina} \nNatália = ${votoNatália} \nKayky = ${votoKayky} \nChris = ${votoChris} \nNulo/Branco = ${votoNulo}`);
+        document.getElementById("votoSabrina").innerHTML = `A candidata Sabrina teve: ${votoSabrina} votos \n`;
+        document.getElementById("votoNatália").innerHTML = `A candidata Natália teve: ${votoNatália} votos \n`;
+        document.getElementById("votoKayky").innerHTML = `O candidato Kayke teve: ${votoKayky} votos \n`;
+        document.getElementById("votoChris").innerHTML = `O candidato Chris teve: ${votoChris} votos \n`;
+        document.getElementById("votoNulo").innerHTML = `A opção nulo teve: ${votoNulo} votos \n`;
     </script>
 </body>
 </html>
