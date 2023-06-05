@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+        }
+        #nome{
+            margin: auto;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .bt{
+            background-color: rgb(145, 187, 73);
+            cursor: pointer;
+            padding: 20px;
+            font-size: 0.7em;
+            border: 1px black solid;
+            border-radius: 50px;
+            box-shadow: 3px 3px rgba(0, 0, 0, 0.438);
+            margin-bottom: 35px;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <body id="nome">
+            <h1>Toque no botão</h1>
+            <button class="bt" onclick="exibirNomeAleatorio()">Nome Aleatórito</button>
+            <div id="aleatorio"></div>
+            <script>
+                var nomes = ["Milena", "Thalita", "Natalia", "Kayky", "Graziela", "Juliana", "Pamela", "Rene", "Leticia", "Henrique"];
+
+                var exibirNome = "";
+
+                function nomesAleatorios() {
+                    var lista = Math.floor(Math.random() * nomes.length);
+                    var nomesAleatorios = nomes[lista];
+
+                    if (nomesAleatorios != exibirNome) {
+                        return nomesAleatorios;
+                    } else {
+                        exibirNome = nomesAleatorios;
+                        return nomesAleatorios;
+                    }
+                }
+
+                function exibirNomeAleatorio() {
+                    var nome = nomesAleatorios();
+                    document.getElementById("aleatorio").innerHTML = nome;
+                }
+            </script>
+        </body>
+    </head>
+</body>
+</html>
